@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/django/myenv/lib
+/blogProject/myvenv/lib
+/practice/myvenv/lib
