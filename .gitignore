@@ -24,4 +24,4 @@ yarn-error.log*
 
 /django/myenv/lib
 /blogProject/myvenv/lib
-/practice/myvenv/lib
+/dj/myvenv/lib
