@@ -1,0 +1,7 @@
+{%for post in posts.all%}
+<h1>{{ post.title }}</h1>
+<h2>{{ post.pubDay }}</h2>
+<h3>
+  {{ post.body }}
+</h3>
+{%endfor%}

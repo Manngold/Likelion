@@ -20,5 +20,8 @@ import spoon.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', spoon.views.index, name="index"),
-    path('result/', spoon.views.result, name="result")
+    path('result/', spoon.views.result, name="result"),
+    path('post/', spoon.views.post, name="post"),
+    path('new/', spoon.views.new, name="new"),
+    path('create/', spoon.views.create, name="create")
 ]

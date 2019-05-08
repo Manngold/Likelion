@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 import random
+from spoon.models import Post
+from django.utils import timezone
 # Create your views here.
 
 def index(request):
@@ -12,3 +14,19 @@ def result(request):
     random.shuffle(spoon)
     random.shuffle(ability)
     return render(request, 'result.html', {'name': name, 'spoon':spoon, 'ability': ability})
+
+def post(request):
+    posts = Post.objects
+    return render(request, 'post.html', {'posts': posts})
+
+def new(request):
+    return render(request, 'new.html')
+
+def create(request):
+    post = Post()
+    post.title = request.GET['title']
+    post.body = request.GET['body']
+    post.pubDay = timezone.datetime.now()
+    post.save()
+
+    return redirect('post')
