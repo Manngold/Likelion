@@ -4,4 +4,7 @@
 <h3>
   {{ post.body }}
 </h3>
+<a href="{%url 'update_page' post.id%}"><button>update</button></a>
+<a href="{%url 'delete' post.id%}"><button>delete</button></a>
 {%endfor%}
+<a href="{%url 'new'%}"><button>new</button></a>

@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect, get_object_or_404
 import random
 from spoon.models import Post
 from django.utils import timezone
@@ -29,4 +29,21 @@ def create(request):
     post.pubDay = timezone.datetime.now()
     post.save()
 
+    return redirect('post')
+
+def update_page(request, post_id):
+    updatePost = get_object_or_404(Post, pk=post_id)
+    return render(request, 'update_page.html', {'post': updatePost})
+
+def update(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    post.title = request.GET['title']
+    post.body = request.GET['body']
+    post.pubDay = timezone.datetime.now()
+    post.save()
+    return redirect('post')
+
+def delete(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    post.delete()
     return redirect('post')

@@ -23,5 +23,8 @@ urlpatterns = [
     path('result/', spoon.views.result, name="result"),
     path('post/', spoon.views.post, name="post"),
     path('new/', spoon.views.new, name="new"),
-    path('create/', spoon.views.create, name="create")
+    path('create/', spoon.views.create, name="create"),
+    path('update_page/<int:post_id>/', spoon.views.update_page, name="update_page"),
+    path('update/<int:post_id>/', spoon.views.update, name="update"),
+    path('delete/<int:post_id>', spoon.views.delete, name="delete")
 ]
