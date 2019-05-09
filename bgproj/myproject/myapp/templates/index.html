@@ -1,0 +1,9 @@
+{% for post in blogs.all %}
+<h1>{{ post.title }}</h1>
+<h4>{{ post.pubDay }}</h4>
+<h2>{{ post.body }}</h2>
+<a href="{%url 'updatePage' post.id%}"><button>update</button></a>
+<a href="{%url 'delete' post.id%}"><button>delete</button></a>
+{% endfor %}
+
+<a href="{%url 'new'%}"><button>new post</button></a>
