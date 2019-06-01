@@ -18,20 +18,20 @@ header img{
 .menu{
     position: absolute;
     display: inline-block;
-    top: 40%;
+    top: 38%;
 }
 
 .menu li{
     margin-right: 15px;
     display: inline-block;
     color: white;
-    font-size: 30px;
+    font-size: 27px;
     padding: 5px 6px;
     border-radius: 3px;
 }
 
 .icon__wrap{
-    top:40%;
+    top: 40%;
     position: absolute;
     display: inline-block;
     right:0;
@@ -39,14 +39,14 @@ header img{
 
 .icon__wrap i {
     color: white;
-    font-size: 30px;
+    font-size: 27px;
     margin-right: 15px;
+    transition: 1s;
 }
 
 li:hover{
     background-color: #DF0312;
     transition: 1s;
-
 }
 
 .icon__wrap i:hover{
@@ -54,30 +54,36 @@ li:hover{
     transition:1s;
 }
 
+/* header end */
+
+/* body start */
+.body__wrap{
+    display: flex;
+    justify-content:center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+
+
+.main__wrap img {
+    width: 70vw;
+    height: 70vh;
+}
+
 @media screen and (max-width: 1250px){
-    header{
-        width: 100%;
-        height: 100vh;
-    }   
     header img {
-        position : absolute;
-        right: 35%;
+        float: none;
+    }
+    .icon__wrap {
+        display: block;
+        position: static;
     }
 
     .menu{
         display: block;
-        top: 5%;
-        left: 10;
-    }
-
-    .menu li{
-        display: inline-block;
-        list-style-type: none;
-        width: 100%;
-    }
-
-    .icon__wrap{
-        top: 5%;
-        right: 10;
+        position: static;
     }
 }
